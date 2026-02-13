@@ -51,22 +51,46 @@ header {
   font-weight: bold;
   font-size: 1.5rem;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .dark-mode-toggle {
-  background: none;
+  background: transparent;
   border: 2px solid var(--mustard);
   color: var(--mustard);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.6rem;
   cursor: pointer;
   font-family: var(--font-funky);
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-size: 0.98rem;
+  font-weight: 700;
+  transition: background-color 0.22s ease, color 0.22s ease, transform 0.12s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  outline: none;
+}
+
+.dark-mode-toggle:focus {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .dark-mode-toggle:hover {
   background-color: var(--mustard);
+  color: var(--ivory);
+  transform: translateY(-2px);
+}
+
+/* Slightly different accent for dark-mode so it blends in */
+body.dark-mode .dark-mode-toggle {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: var(--green);
   color: var(--ivory);
 }
 
