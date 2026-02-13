@@ -1,5 +1,4 @@
 # Portfolio_RU
-# Rasika Umate — Portfolio Website
 
 I built this portfolio from scratch as a college project to show the things I'm learning and the projects I enjoy making. It's mostly HTML, CSS, and JavaScript and it was a great way to practice layout, animations, and small JS features (like form validation and a dark mode toggle).
 
