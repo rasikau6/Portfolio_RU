@@ -63,6 +63,7 @@ Dark mode overrides are applied when `body.dark-mode` is active; the button in t
 Portfolio_2/
 ├── index.html                         # Main site and inline JS
 ├── style.css                          # All visual styles, color variables, dark-mode overrides
+├── script.js                          
 ├── Rasika_Umate_Resume_Jan26_2.pdf    # Resume available for download
 └── README.md                          # This file
 ```
