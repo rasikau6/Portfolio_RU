@@ -18,6 +18,7 @@
       <a href="#skills">Skills</a>
       <a href="#academic">Academic</a>
       <a href="#contact">Contact</a>
+      <button class="dark-mode-toggle" id="darkModeBtn">🌙 Dark</button>
     </nav>
   </header>
 
@@ -126,7 +127,7 @@
 <section id="contact" class="contact" data-aos="fade-up">
   <h2>Let’s Work Together</h2>
   <p class="contact-subtext">Open to freelance, internships, and collaborations in tech & design </p>
-  <form action="https://formspree.io/f/mdkeqnrj" method="POST">
+  <form action="https://formspree.io/f/mvzbkwnk" method="POST">
     <label>
       <input type="text" name="name" placeholder="Your Name" required />
     </label>
@@ -145,7 +146,7 @@
   <p>© 2026 Rasika Umate. All rights reserved.</p>
   <p>
     Email:
-    <a href="mailto:rasika.umate@gmail.com">rasika.umate@gmail.com</a>
+    <a href="mailto:rasika.scholar@gmail.com">rasika.scholar@gmail.com</a>
     |
   <div class="social-links">
     <a href="https://www.linkedin.com/in/rasikaumate/" target="_blank">
@@ -181,6 +182,67 @@
         link.classList.add("active");
       }
     });
+  });
+
+  // Form validation
+  const form = document.querySelector('.contact form');
+  const nameInput = form.querySelector('input[name="name"]');
+  const emailInput = form.querySelector('input[name="email"]');
+  const messageInput = form.querySelector('textarea[name="message"]');
+
+  form.addEventListener('submit', (e) => {
+    let isValid = true;
+    const errors = [];
+
+    // Validate name
+    if (nameInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Name is required.');
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Email is required.');
+    } else if (!emailRegex.test(emailInput.value)) {
+      isValid = false;
+      errors.push('Please enter a valid email address.');
+    }
+
+    // Validate message
+    if (messageInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Message cannot be empty.');
+    }
+
+    // If validation fails, prevent form submission and show errors
+    if (!isValid) {
+      e.preventDefault();
+      alert('Please fix the following errors:\n\n' + errors.join('\n'));
+    }
+  });
+
+  // Dark mode toggle
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  const body = document.body;
+
+  // Check if dark mode was previously enabled
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeBtn.textContent = '☀️ Light';
+  }
+
+  darkModeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+      darkModeBtn.textContent = '☀️ Light';
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      darkModeBtn.textContent = '🌙 Dark';
+      localStorage.setItem('darkMode', 'disabled');
+    }
   });
 </script>
 </body>
