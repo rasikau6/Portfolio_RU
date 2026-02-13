@@ -5,8 +5,24 @@
   --peach: #fddfce;
   --pink: #f8c8c3;
   --ivory: #f8f4e3;
+  --green: #7fb069;
   --font-mono: 'IBM Plex Mono', monospace;
   --font-funky: 'Fredoka', sans-serif;
+  --text-color: #000;
+  --text-light: #555;
+}
+
+/* Dark mode colors */
+body.dark-mode {
+  --yellow: #2a2a2a;
+  --blue: #1e3a3a;
+  --mustard: #8b7c2a;
+  --peach: #3d2f25;
+  --pink: #3d2d2a;
+  --ivory: #1a1a1a;
+  --green: #5a8f4a;
+  --text-color: #e0e0e0;
+  --text-light: #b0b0b0;
 }
 
 * {
@@ -34,6 +50,24 @@ header {
   color: var(--mustard);
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: 2px solid var(--mustard);
+  color: var(--mustard);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-funky);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--mustard);
+  color: var(--ivory);
 }
 
 html {
@@ -94,7 +128,7 @@ label {
 nav a {
   margin-left: 2rem;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
@@ -227,7 +261,7 @@ section {
   font-size: 1.4rem;
   font-family: var(--font-mono);
   line-height: 1.7;
-  color: #333;
+  color: var(--text-color);
   position: relative;
   z-index: 1;
 }
@@ -253,7 +287,7 @@ section {
 }
 
 .about-text p {
-  color: #555;
+  color: var(--text-light);
   font-size: 1.3rem;
   margin-top: 1rem;
   position: relative;
@@ -336,7 +370,7 @@ section {
 
 .contact-subtext {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text-light);
   max-width: 600px;
   margin: 0 auto 2.5rem;
   font-family: var(--font-mono);
@@ -361,6 +395,8 @@ section {
   border-radius: 0.5rem;
   font-family: var(--font-mono);
   font-size: 1rem;
+  background-color: var(--ivory);
+  color: var(--text-color);
 }
 
 .contact textarea {
@@ -615,13 +651,13 @@ html {
 
 .academic-item h3 {
   font-size: 1.3rem;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .academic-item p {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-light);
 }
 
 .projects {
@@ -682,7 +718,7 @@ html {
 
 .project-info p {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-color);
   font-family: var(--font-mono);
   line-height: 1.6;
 }
