@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasika Umate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Rasika Umate</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#academic">Academic</a>
+      <a href="#contact">Contact</a>
+      <button class="dark-mode-toggle" id="darkModeBtn">🌙 Dark</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text" data-aos="fade-right">
+      <h1 class="typewriter">Hi, I’m <span>Rasika</span></h1>
+      <p class="welcome-text">Welcome to my digital space! </p>
+      <p class="short-desc">VLSI Design Learner.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn secondary">Let's Connect</a>
+        <a href="Rasika_Umate_Resume_Jan26_2.pdf" download class="btn secondary">Download Resume</a>
+      </div>
+    </div>
+    <div class="hero-img" data-aos="fade-left">
+      <div class="large-bubble"></div>
+      <div class="blob-bg small-bubble"></div>
+      <div class="blob-bg"></div>
+    </div>
+  </section>
+  
+  
+
+  <section class="wavy-text" data-aos="fade-in">
+    <p>Ready to create something amazing? Let's connect! ✨</p>
+  </section>
+
+  <section id="about" class="about" data-aos="fade-up">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I'm Rasika, I'm an E&CE student passionate about electronics, VLSI, embedded systems, and chip design. I enjoy building practical hardware projects and trying out new technologies".</p>
+      <p>Feel free to explore my website, and reach out if you'd like to collaborate or discuss exciting tech opportunities!</p>
+    </div>
+  </section>  
+  
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="Ultrasonic-LiDAR Autonomous Vehicle.jpg" alt="ultrasonic-LiDAR Autonomous Vehicle">
+        <div class="project-info">
+          <h3>Ultrasonic-LiDAR Autonomous Vehicle</h3>
+          <p>Built a low-cost autonomous vehicle that uses ultrasonic sensors to simulate LiDAR, enabling Level-3 ADAS functions like real-time obstacle detection, safe, navigation, and automated decision-making.</p>
+        </div>
+      </div>
+  
+      <div class="project-card">
+        <img src="IoT-Based Driver Alertness & Car Safety System.png" alt="IoT-Based Driver Alertness & Car Safety System">
+        <div class="project-info">
+          <h3>IoT-based Driver Alertness & Car Safety System</h3>
+          <p>Developed a real time system for drowsiness detection, heart rate monitoring, and eye-blink IR sensor using Arduino, ESP32+wifi, with LCD/buzzer alerts.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+
+  <!-- Skills Section -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>C Programming</li>
+    <li>Embedded C</li>
+    <li>Verilog</li>
+    <li>RTL Design</li>
+    <li>MATLAB</li>
+    <li>Data Structures & Algorithms</li>
+    <li>Web Development (HTML, CSS, JavaScript)</li>
+    <li>Python</li>
+    <li>AI/ML Fundamentals</li>
+  </ul>
+</section>
+
+<!-- Academic Section -->
+<section id="academic" class="academic">
+  <h2>Academic Background</h2>
+  <div class="academic-timeline">
+    <div class="academic-item">
+      <h3>Bachelor of Technology – Electrical & Computer Engineering</h3>
+      <p>MIT- World Peace Univeristy, 2023 – Present</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certificate Section -->
+<section id="certificates" class="certificates">
+  <h2>Certificates</h2>
+
+  <div class="certificate-grid">
+    
+    <div class="NPTEL C-based VLSI design">
+      <h3>NPTEL C-based VLSI design</h3>
+      <p>March '25</p>
+    </div>
+
+    <div class="NPTEL Embedded System Design with ARM">
+      <h3>NPTEL Embedded System Design with ARM</h3>
+      <p>Oct '25</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact" data-aos="fade-up">
+  <h2>Let’s Work Together</h2>
+  <p class="contact-subtext">Open to freelance, internships, and collaborations in tech & design </p>
+  <form action="https://formspree.io/f/mvzbkwnk" method="POST">
+    <label>
+      <input type="text" name="name" placeholder="Your Name" required />
+    </label>
+    <label>
+      <input type="email" name="email" placeholder="Your Email" required />
+    </label>
+    <label>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+    </label>
+    <button type="submit">Send Message</button>
+  </form>
+  
+
+
+  <footer>
+  <p>© 2026 Rasika Umate. All rights reserved.</p>
+  <p>
+    Email:
+    <a href="mailto:rasika.scholar@gmail.com">rasika.scholar@gmail.com</a>
+    |
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/rasikaumate/" target="_blank">
+      LinkedIn
+    </a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+
+  // Scrollspy functionality
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 120;
+
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // Form validation
+  const form = document.querySelector('.contact form');
+  const nameInput = form.querySelector('input[name="name"]');
+  const emailInput = form.querySelector('input[name="email"]');
+  const messageInput = form.querySelector('textarea[name="message"]');
+
+  form.addEventListener('submit', (e) => {
+    let isValid = true;
+    const errors = [];
+
+    // Validate name
+    if (nameInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Name is required.');
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Email is required.');
+    } else if (!emailRegex.test(emailInput.value)) {
+      isValid = false;
+      errors.push('Please enter a valid email address.');
+    }
+
+    // Validate message
+    if (messageInput.value.trim() === '') {
+      isValid = false;
+      errors.push('Message cannot be empty.');
+    }
+
+    // If validation fails, prevent form submission and show errors
+    if (!isValid) {
+      e.preventDefault();
+      alert('Please fix the following errors:\n\n' + errors.join('\n'));
+    }
+  });
+
+  // Dark mode toggle
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  const body = document.body;
+
+  // Check if dark mode was previously enabled
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeBtn.textContent = '☀️ Light';
+  }
+
+  darkModeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+      darkModeBtn.textContent = '☀️ Light';
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      darkModeBtn.textContent = '🌙 Dark';
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
+</script>
+</body>
+</html>
